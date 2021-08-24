@@ -1,0 +1,11 @@
+CRITICAL - 2021-07-21 17:02:00 --> unlink(/home/interne1/public_html/screening/writable/debugbar/debugbar_1626061522.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(/home/in...', '/home/interne1/...', 78, Array)
+#1 /home/interne1/public_html/screening/system/Debug/Toolbar/Collectors/History.php(78): unlink('/home/interne1/...')
+#2 /home/interne1/public_html/screening/system/Debug/Toolbar.php(441): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1626904917, 20)
+#3 /home/interne1/public_html/screening/system/Debug/Toolbar.php(413): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 /home/interne1/public_html/screening/app/Config/Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#5 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#6 /home/interne1/public_html/screening/system/Events/Events.php(166): call_user_func(Object(Closure))
+#7 /home/interne1/public_html/screening/system/CodeIgniter.php(314): CodeIgniter\Events\Events::trigger('pre_system')
+#8 /home/interne1/public_html/screening/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
