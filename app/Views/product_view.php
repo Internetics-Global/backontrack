@@ -66,7 +66,7 @@ function print_me() {
 		
 						printable: 'print_from_here', 
 						targetStyles: '*', 
-						css: ['/screening/public/assets/grocery_crud/themes/internetics/css/bootstrap/bootstrap.min.css', '/screening/public/assets/grocery_crud/themes/internetics/css/common.css', '/screening/public/assets/grocery_crud/themes/internetics/css/general.css', '/screening/public/assets/grocery_crud/themes/internetics/css/add-edit-form.css', '/screening/public/assets/grocery_crud/themes/internetics/css/main.css', '/screening/public/assets/grocery_crud/themes/internetics/css/internetics.css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css','/screening/public/assets/grocery_crud/themes/internetics/css/print22.css'],
+						css: ['/screening/public/assets/grocery_crud/themes/internetics/css/bootstrap/bootstrap.min.css', '/screening/public/assets/grocery_crud/themes/internetics/css/common.css', '/screening/public/assets/grocery_crud/themes/internetics/css/general.css', '/screening/public/assets/grocery_crud/themes/internetics/css/add-edit-form.css', '/screening/public/assets/grocery_crud/themes/internetics/css/main.css', '/screening/public/assets/grocery_crud/themes/internetics/css/internetics.css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css','/screening/public/assets/grocery_crud/themes/internetics/css/print23.css'],
 						style: '.gcrud-form-group { display: none; }',
 						header: 'Screening Form',
 						headerStyle: 'font-weight: 600;',
@@ -184,22 +184,22 @@ function remove_brackets() {
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 1'  )) {
                     jump = 1; 
-                     bootbox.alert ('Your client\'s mobility level is determined to be Level 1 at this stage. Please continue with the screening. <img src="https://techcrunch.com/wp-content/uploads/2020/09/GettyImages-a0146-000299.jpg?w=850&h=492&crop=1">');
+                     bootbox.alert ('Your client\'s mobility level is determined to be Level 1 - Supervision - at this stage. Please continue with the screening. <img src="../../../assets/uploads/files/levels/1_supervision.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 2' ))   {
                     jump = 2;
-                    bootbox.alert ('Your client\'s mobility level is determined to be Level 2 at this stage. Please continue with the screening.');
+                    bootbox.alert ('Your client\'s mobility level is determined to be Level 2 - Physical assisted ambulant person - at this stage. Please continue with the screening.<img src="../../../assets/uploads/files/levels/2_physical_assisted.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 3' ))   {
                     jump = 3;
-                    bootbox.alert ('Your client\'s mobility level is determined to be Level 3 at this stage. Please continue with the screening.');
+                    bootbox.alert ('Your client\'s mobility level is determined to be Level 3 - Standing lifter - at this stage. Please continue with the screening.<img src="../../../assets/uploads/files/levels/3_standing_lifter.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 4' ))   {
                     jump = 4;
-                    bootbox.alert ('Your client\'s mobility level is determined to be Level 4 at this stage. Please continue with the screening.');
+                    bootbox.alert ('Your client\'s mobility level is determined to be Level 4 - Full lifter - at this stage. Please continue with the screening.<img src="../../../assets/uploads/files/levels/4_full_lifter.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level X' ))   {
@@ -291,7 +291,7 @@ function remove_brackets() {
                
                 if ((  ($('#q4').css('display') == 'block') && (mobility_levels.innerHTML != 'Level 2 Equipment Success') )) { bootbox.alert('Due to lack of suitable equipment your client\'s mobility level has been revised to Level 3'); }
                 
-                if ((  ($('#q5').css('display') == 'block') && (mobility_levels.innerHTML != 'Level 3 Equipment Success') )) { bootbox.alert('Due to lack of suitable equipment your client\'s mobility level has been revised to Level 4. Delay the task and make your client comfortable.'); }
+                if ((  ($('#q5').css('display') == 'block') && (mobility_levels.innerHTML != 'Level 3 Equipment Success') )) { bootbox.alert('Due to lack of suitable equipment your client\'s mobility level has been revised to Level 4. Attend cares and make your client comfortable.'); }
                
                 
                 
@@ -368,7 +368,7 @@ function remove_brackets() {
 					  checkboxes[c].readOnly = true;
 	//				  checkboxes[c].disabled = true;
 					  
-				 $('input[type="checkbox"][readonly]').on("click.readonly", function(event){event.preventDefault();}).css("opacity", "0.5");
+				 $('input[type="checkbox"][readonly]').on("click.readonly", function(event){event.preventDefault();}).css("opacity", "0");
 					  
 					 }
 				

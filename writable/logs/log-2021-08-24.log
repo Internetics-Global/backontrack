@@ -1,0 +1,10 @@
+CRITICAL - 2021-08-24 23:58:06 --> syntax error, unexpected 'test' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /var/www/html/screening/system/Autoloader/Autoloader.php(265): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/s...')
+#1 /var/www/html/screening/system/Autoloader/Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Inte...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Inte...')
+#3 /var/www/html/screening/app/Controllers/Product.php(46): spl_autoload_call('App\\Models\\Inte...')
+#4 /var/www/html/screening/system/CodeIgniter.php(936): App\Controllers\Product->screening_management('edit', '1012')
+#5 /var/www/html/screening/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 /var/www/html/screening/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/screening/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
