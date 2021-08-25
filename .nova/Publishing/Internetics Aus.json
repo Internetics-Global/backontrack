@@ -1,0 +1,12 @@
+{
+  "identifier" : "BB9A3718-3013-4A42-8E7C-44263A28AB46",
+  "ignoredFilePatterns" : [
+    "app\/Config\/App.php",
+    "app\/Config\/Database.php",
+    "writable\/debugbar",
+    "writable"
+  ],
+  "remotePath" : "\/screening",
+  "server" : "Internetics Aus",
+  "usesPublishing" : false
+}

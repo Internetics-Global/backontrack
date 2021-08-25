@@ -184,7 +184,7 @@ function remove_brackets() {
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 1'  )) {
                     jump = 1; 
-                     bootbox.alert ('Your client\'s mobility level is determined to be Level 1 at this stage. Please continue with the screening.');
+                     bootbox.alert ('Your client\'s mobility level is determined to be Level 1 at this stage. Please continue with the screening. <img src="https://techcrunch.com/wp-content/uploads/2020/09/GettyImages-a0146-000299.jpg?w=850&h=492&crop=1">');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 2' ))   {
