@@ -6,8 +6,8 @@ class InterneticsLibrary extends GroceryCrud
   
  protected function get_multiselect_input($field_info,$value)
     {
-	   
-	    
+     
+      
         $this->load_js_chosen();
         $this->set_js_config($this->default_javascript_path.'/jquery_plugins/config/jquery.chosen.config.js');
 
@@ -30,41 +30,44 @@ class InterneticsLibrary extends GroceryCrud
 
             
             if ($selected) {
-	            
-	        $dbhost = 'database'; $dbuser = 'interne1_screen2'; $dbpass = 'Ne]e6ho+3y5!'; $dbname = 'interne1_screening'; $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-			$image = $conn->query("SELECT image,movie FROM items_$field_info->name WHERE item_id = $option_value")->fetch_object()->image; 
+              
+      
+      $db = \Config\Database::connect();
+      $query  = $db->query("SELECT image FROM items_$field_info->name WHERE item_id = $option_value");
+      $row = $query->getRow();
+      $image = $row->image;
 
-			mysqli_close($conn);
-	            
-	            
-        	$input .= "<div class='col-9'>$option_label ";
+              
+              
+          $input .= "<div class='col-9'>$option_label ";
                     
                     if ($image) {$input .= "<a class='example-image-link-$option_label' href='../../../assets/uploads/files/" . $image . "' data-lightbox='example-$option_label'><i class='bi bi-image-fill'></i></a>";  } 	
                                         
                     $input .= "</div>
 
-        	
-        					<div class='col-3 text-right'><label class='switch'><input type=checkbox id='field-{$field_info->name}' name='{$field_info->name}[]' value='$option_value' $selected /><span class='slider round'></span></label>
-        					</div>";
+          
+                  <div class='col-3 text-right'><label class='switch'><input type=checkbox id='field-{$field_info->name}' name='{$field_info->name}[]' value='$option_value' $selected /><span class='slider round'></span></label>
+                  </div>";
         } else {
-	        
-	        $dbhost = 'database'; $dbuser = 'interne1_screen2'; $dbpass = 'Ne]e6ho+3y5!'; $dbname = 'interne1_screening'; $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-			$image = $conn->query("SELECT image,movie FROM items_$field_info->name WHERE item_id = $option_value")->fetch_object()->image; 
-			mysqli_close($conn);
-	        
-	        
-	        $input .= "<div class='col-9'>$option_label ";
+          
+      $db = \Config\Database::connect();
+      $query  = $db->query("SELECT image FROM items_$field_info->name WHERE item_id = $option_value");
+      $row = $query->getRow();
+      $image = $row->image;
+          
+          
+          $input .= "<div class='col-9'>$option_label ";
                     
                     if ($image) {$input .= "<a class='example-image-link-$option_label' href='../../../assets/uploads/files/" . $image . "' data-lightbox='example-$option_label'><i class='bi bi-image-fill'></i></a>";  } 	
                     
                                         
                     $input .= "</div>
 
-	        
-	        				<div class='col-3 text-right'><label class='switch'><input type=checkbox id='field-{$field_info->name}' name='{$field_info->name}[]' value='$option_value'/><span class='slider round'></span></label>
-	        				</div>";
-	        
-	        			}
+          
+                  <div class='col-3 text-right'><label class='switch'><input type=checkbox id='field-{$field_info->name}' name='{$field_info->name}[]' value='$option_value'/><span class='slider round'></span></label>
+                  </div>";
+          
+                }
             
             $input .= "";
             
@@ -79,7 +82,7 @@ class InterneticsLibrary extends GroceryCrud
     }
 
 
-					                    
+                              
                                         
                 
                 
@@ -143,18 +146,31 @@ class InterneticsLibrary extends GroceryCrud
                 foreach($selected_values as $id => $name)
                 
                 {                    
-					$dbhost = 'database'; $dbuser = 'interne1_screen2'; $dbpass = 'Ne]e6ho+3y5!'; $dbname = 'interne1_screening'; $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-					$image = $conn->query("SELECT image,movie FROM items_$field_info_type->name WHERE item_id = $id")->fetch_object()->image; 
-					mysqli_close($conn);   
+
+          
+
+          $db = \Config\Database::connect();
+          $query  = $db->query("SELECT image,movie FROM items_$field_info_type->name WHERE item_id = $id");
+          $row = $query->getRow();
+          $image = $row->image;
+          $movie = $row->movie;
+
+
+
 
                    $input .= "<div class='col-9'>$name ";
                     
-                    if ($image) {$input .= "<a class='example-image-link-$name' href='../../../assets/uploads/files/" . $image . "' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 	
+                    if ($image) {$input .= "<a class='example-image-link-$name' href='../../../assets/uploads/files/" . $image . "' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 
+                    
+                    if ($movie) {$input .= "<a href='" . $movie . "' target='_new'><i class='bi bi-play-circle-fill'></i></a>";  } 	
+                    
+                    
+                    
                                         
                     $input .= "</div>
                     
-                    			<div class='col-3 text-right'><label class='switch'><input type=checkbox id='$id' name='{$field_info_type->name}[]' value='$id' onclick='displayMobilityLevel()' checked=on /><span class='slider round'></span></label>";
-                    				                 				
+                          <div class='col-3 text-right'><label class='switch'><input type=checkbox id='$id' name='{$field_info_type->name}[]' value='$id' onclick='displayMobilityLevel()' checked=on /><span class='slider round'></span></label>";
+                                                     
                     $input .= "</div>";
           
                 }
@@ -166,18 +182,23 @@ class InterneticsLibrary extends GroceryCrud
              
                 foreach($unselected_values as $id => $name)
                 {
-					$dbhost = 'database'; $dbuser = 'interne1_screen2'; $dbpass = 'Ne]e6ho+3y5!'; $dbname = 'interne1_screening'; $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-					$image = $conn->query("SELECT image,movie FROM items_$field_info_type->name WHERE item_id = $id")->fetch_object()->image; 
-					mysqli_close($conn);   
+                  
+          $db = \Config\Database::connect();
+          $query  = $db->query("SELECT image,movie FROM items_$field_info_type->name WHERE item_id = $id");
+          $row = $query->getRow();
+          $image = $row->image;
+          $movie = $row->movie;  
 
                    $input .= "<div class='col-9'>$name ";
                     
-                    if ($image) {$input .= "<a class='example-image-link-$name' href='../../../assets/uploads/files/" . $image . "' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 	
+                    if ($image) {$input .= "<a class='example-image-link-$name' href='../../../assets/uploads/files/" . $image . "' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 
+                    
+                    if ($movie) {$input .= "<a href='" . $movie . "' target='_new'><i class='bi bi-play-circle-fill'></i></a>";  } 
                                         
                     $input .= "</div>
                     
-                    			<div class='col-3 text-right'><label class='switch'><input type=checkbox id='$id' name='{$field_info_type->name}[]' value='$id' onclick='displayMobilityLevel()' /><span class='slider round'></span></label>";
-                    				                 				
+                          <div class='col-3 text-right'><label class='switch'><input type=checkbox id='$id' name='{$field_info_type->name}[]' value='$id' onclick='displayMobilityLevel()' /><span class='slider round'></span></label>";
+                                                     
                     $input .= "</div>";
                     
                 }
@@ -197,7 +218,7 @@ class InterneticsLibrary extends GroceryCrud
 
             
 
-           			 $input .= "</div>";
+                  $input .= "</div>";
             
 
             
@@ -378,6 +399,5 @@ class InterneticsLibrary extends GroceryCrud
 
 
 
-	
+  
 }
-

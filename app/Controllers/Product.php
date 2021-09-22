@@ -11,19 +11,6 @@ class Product extends BaseController
 
 
 	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
 
  public function screening_management()
 
@@ -187,27 +174,7 @@ class Product extends BaseController
 
 
 
-
-
-
-
-	public function items_available_equipment_1() {
-        $crud = new GroceryCrud();
-        $crud = new InterneticsLibrary();       
-		$crud->setTheme('internetics');
-        $crud->setTable('items_available_equipment_1');
-        $crud->setSubject('Available Equipment #1');
-//      $crud->unsetAdd();
-//      $crud->unsetDelete();
-        $output = $crud->render();
-        return $this->_productOutput($output);
-    }
-
-
-	
-    
-        
-   
+  
 
     
     

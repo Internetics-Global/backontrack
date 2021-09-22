@@ -5,7 +5,7 @@
     $this->set_css($this->default_theme_path.'/internetics/css/general.css');
     $this->set_css($this->default_theme_path.'/internetics/css/add-edit-form.css');
     $this->set_css($this->default_theme_path.'/internetics/css/main.css');
-    $this->set_css($this->default_theme_path.'/internetics/css/internetics.css?v=34');
+    $this->set_css($this->default_theme_path.'/internetics/css/internetics.css?v=35');
     $this->set_css($this->default_theme_path.'/internetics/css/lightbox.css');
     $this->set_css($this->default_theme_path.'/internetics/css/print.min.css');
    
@@ -213,7 +213,7 @@ $countfields = 0;
 	                        <button onclick="prev_question(); displayMobilityLevel();" class="btn btn-secondary btn-success b10" id="prev_question_btn" >RESTART</button>
 							<button onclick="next_question(); displayMobilityLevel();" class="btn btn-secondary btn-success b10" id="next_question_btn" >NEXT</button>
 							<BR>
-						    <input type="image" onclick="print_me();" class="print_pdf_button" id="print_pdf_button" style="display: inline-block;" src="../../../assets/grocery_crud/themes/internetics/images/print-pdf-icon2.png" />
+						    <input type="image" onclick="print_me();" class="print_pdf_button" id="print_pdf_button" style="display: inline-block;" src="/screening/public/assets/grocery_crud/themes/internetics/images/print-pdf-icon2.png" />
 							
                     	</div>
                     </div>

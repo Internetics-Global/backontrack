@@ -30,7 +30,7 @@ foreach($css_files as $file): ?>
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="add">Add screening form</a>
+        <a class="nav-link" href="/screening/public/product/screening_management/add">Add screening form</a>
       </li>
     </ul>
 
@@ -66,7 +66,7 @@ function print_me() {
 		
 						printable: 'print_from_here', 
 						targetStyles: '*', 
-						css: ['/screening/public/assets/grocery_crud/themes/internetics/css/bootstrap/bootstrap.min.css', '/screening/public/assets/grocery_crud/themes/internetics/css/common.css', '/screening/public/assets/grocery_crud/themes/internetics/css/general.css', '/screening/public/assets/grocery_crud/themes/internetics/css/add-edit-form.css', '/screening/public/assets/grocery_crud/themes/internetics/css/main.css', '/screening/public/assets/grocery_crud/themes/internetics/css/internetics.css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css','/screening/public/assets/grocery_crud/themes/internetics/css/print23.css'],
+						css: ['/screening/public/assets/grocery_crud/themes/internetics/css/bootstrap/bootstrap.min.css', '/screening/public/assets/grocery_crud/themes/internetics/css/common.css', '/screening/public/assets/grocery_crud/themes/internetics/css/general.css', '/screening/public/assets/grocery_crud/themes/internetics/css/add-edit-form.css', '/screening/public/assets/grocery_crud/themes/internetics/css/main.css', '/screening/public/assets/grocery_crud/themes/internetics/css/internetics.css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css','/screening/public/assets/grocery_crud/themes/internetics/css/print25.css'],
 						style: '.gcrud-form-group { display: none; }',
 						header: 'Screening Form',
 						headerStyle: 'font-weight: 600;',
@@ -199,7 +199,7 @@ function remove_brackets() {
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 4' ))   {
                     jump = 4;
-                    bootbox.alert ('Your client\'s mobility level is determined to be Level 4 - Full lifter - at this stage. Please continue with the screening.<img src="../../../assets/uploads/files/levels/4_full_lifter.png" width=100%>');
+                    bootbox.alert ('Your client\'s mobility level is determined to be Level 4 - Full lifter - at this stage. Please continue with the screening.<img src="/screening/public/assets/uploads/files/levels/4_full_lifter.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level X' ))   {
