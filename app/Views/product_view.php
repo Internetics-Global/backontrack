@@ -184,17 +184,17 @@ function remove_brackets() {
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 1'  )) {
                     jump = 1; 
-                     bootbox.alert ('Your client\'s mobility level is determined to be Level 1 - Supervision - at this stage. Please continue with the screening. <img src="../../../assets/uploads/files/levels/1_supervision.png" width=100%>');
+                     bootbox.alert ('Your client\'s mobility level is determined to be Level 1 - Supervision - at this stage. Please continue with the screening. <img src="/screening/public/assets/uploads/files/levels/1_supervision.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 2' ))   {
                     jump = 2;
-                    bootbox.alert ('Your client\'s mobility level is determined to be Level 2 - Physical assisted ambulant person - at this stage. Please continue with the screening.<img src="../../../assets/uploads/files/levels/2_physical_assisted.png" width=100%>');
+                    bootbox.alert ('Your client\'s mobility level is determined to be Level 2 - Physical assisted ambulant person - at this stage. Please continue with the screening.<img src="/screening/public/assets/uploads/files/levels/2_physical_assisted.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 3' ))   {
                     jump = 3;
-                    bootbox.alert ('Your client\'s mobility level is determined to be Level 3 - Standing lifter - at this stage. Please continue with the screening.<img src="../../../assets/uploads/files/levels/3_standing_lifter.png" width=100%>');
+                    bootbox.alert ('Your client\'s mobility level is determined to be Level 3 - Standing lifter - at this stage. Please continue with the screening.<img src="/screening/public/assets/uploads/files/levels/3_standing_lifter.png" width=100%>');
                 } 
                 
                 else if ($('#q2').css('display') == 'block' && (mobility_levels.innerHTML == 'Level 4' ))   {

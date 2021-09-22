@@ -1,0 +1,12 @@
+{
+  "identifier" : "C16B7430-06F9-4743-9050-673CE110EFDD",
+  "ignoredFilePatterns" : [
+    "app\/Config\/App.php",
+    "app\/Config\/Database.php",
+    "writable\/debugbar",
+    "writable"
+  ],
+  "remotePath" : "\/public_html\/screening",
+  "server" : "Mobility Screen",
+  "usesPublishing" : true
+}
