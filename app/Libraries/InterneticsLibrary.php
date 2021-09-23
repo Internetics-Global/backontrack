@@ -41,7 +41,7 @@ class InterneticsLibrary extends GroceryCrud
               
           $input .= "<div class='col-9'>$option_label ";
                     
-                    if ($image) {$input .= "<a class='example-image-link-$option_label' href='/screening/public/assets/uploads/files/" . $image . "' data-lightbox='example-$option_label'><i class='bi bi-image-fill'></i></a>";  } 	
+                    if ($image) {$input .= "<a class='example-image-link-$option_label' href='/screening/public/assets/uploads/files/" . $image . "' title='Launch Illustration' data-lightbox='example-$option_label'><i class='bi bi-image-fill'></i></a>";  } 	
                                         
                     $input .= "</div>
 
@@ -58,7 +58,7 @@ class InterneticsLibrary extends GroceryCrud
           
           $input .= "<div class='col-9'>$option_label ";
                     
-                    if ($image) {$input .= "<a class='example-image-link-$option_label' href='/screening/public/assets/uploads/files/" . $image . "' data-lightbox='example-$option_label'><i class='bi bi-image-fill'></i></a>";  } 	
+                    if ($image) {$input .= "<a class='example-image-link-$option_label' href='/screening/public/assets/uploads/files/" . $image . "' title='Launch Illustration' data-lightbox='example-$option_label'><i class='bi bi-image-fill'></i></a>";  } 	
                     
                                         
                     $input .= "</div>
@@ -160,9 +160,9 @@ class InterneticsLibrary extends GroceryCrud
 
                    $input .= "<div class='col-9'>$name ";
                     
-                    if ($image) {$input .= "<a class='example-image-link-$name' href='/screening/public/assets/uploads/files/" . $image . "' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 
+                    if ($image) {$input .= "<a class='example-image-link-$name' href='/screening/public/assets/uploads/files/" . $image . "' title='Launch Illustration' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 
                     
-                    if ($movie) {$input .= "<a href='" . $movie . "' target='_new'><i class='bi bi-play-circle-fill'></i></a>";  } 	
+                    if ($movie) {$input .= "<a href='" . $movie . "' title='Launch Movie' target='_new'><i class='bi bi-play-circle-fill'></i></a>";  } 	
                     
                     
                     
@@ -191,9 +191,9 @@ class InterneticsLibrary extends GroceryCrud
 
                    $input .= "<div class='col-9'>$name ";
                     
-                    if ($image) {$input .= "<a class='example-image-link-$name' href='/screening/public/assets/uploads/files/" . $image . "' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 
+                    if ($image) {$input .= "<a class='example-image-link-$name' href='/screening/public/assets/uploads/files/" . $image . "' title='Launch Illustration' data-lightbox='example-1-$name'><i class='bi bi-image-fill'></i></a>";  } 
                     
-                    if ($movie) {$input .= "<a href='" . $movie . "' target='_new'><i class='bi bi-play-circle-fill'></i></a>";  } 
+                    if ($movie) {$input .= "<a href='" . $movie . "' title='Launch Movie' target='_new'><i class='bi bi-play-circle-fill'></i></a>";  } 
                                         
                     $input .= "</div>
                     
