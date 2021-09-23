@@ -26,11 +26,9 @@ foreach($css_files as $file): ?>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="/screening/public/product/screening_management/add">Add screening form</a>
+        <a class="nav-link active" href="/screening/public/product/screening_management/add">Start new screening</a>
       </li>
     </ul>
 
