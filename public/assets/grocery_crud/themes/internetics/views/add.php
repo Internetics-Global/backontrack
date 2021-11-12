@@ -5,7 +5,7 @@
     $this->set_css($this->default_theme_path.'/internetics/css/general.css');
     $this->set_css($this->default_theme_path.'/internetics/css/add-edit-form.css');
     $this->set_css($this->default_theme_path.'/internetics/css/main.css');
-    $this->set_css($this->default_theme_path.'/internetics/css/internetics.css?v=41');
+    $this->set_css($this->default_theme_path.'/internetics/css/internetics.css?v=43');
     $this->set_css($this->default_theme_path.'/internetics/css/lightbox.css');
     $this->set_css($this->default_theme_path.'/internetics/css/print.min.css');
 
@@ -212,12 +212,14 @@ $countfields = 0;
                      <div class="form-group gcrud-form-group">
                         <div class="col-sm-offset-3 col-sm-12">
 	                        <button onclick="prev_question(); displayMobilityLevel();" class="btn btn-secondary btn-success b10" id="prev_question_btn" >RESTART</button>
-							<button onclick="next_question(); displayMobilityLevel();" class="btn btn-secondary btn-success b10" id="next_question_btn" >NEXT</button>
-							<BR><div id="print_pdf_message" style="display: inline-block;">
-                          When selecting PRINT/PDF please ensure you tick  “Print backgrounds” (Safari) or “Background graphics” (Chrome) to see all the tick-boxes.
-                      </div>
-                      <BR>
-						    <input type="image" onclick="print_me();" class="print_pdf_button" id="print_pdf_button" style="display: inline-block;" src="/screening/public/assets/grocery_crud/themes/internetics/images/print-pdf-icon2.png" title="Print" />
+                           <button onclick="next_question(); displayMobilityLevel();" class="btn btn-secondary btn-success b10" id="next_question_btn" >NEXT</button>
+                           <BR><div id="print_pdf_message" style="display: inline-block;">
+                                      When selecting PRINT/PDF please ensure you tick “Print backgrounds” (Safari) or “Background graphics” (Chrome) to see all the tick-boxes. Click the information button for example on Chrome: <a class="backg_graphics" href="/screening/public/assets/grocery_crud/themes/internetics/images/backg_graphics.png" alt="Launch Illustration" data-lightbox="backg_graphics"><i class="bi bi-info-circle-fill"></i></a>
+                           
+                                  <a class="backg_graphics" href="/screening/public/assets/grocery_crud/themes/internetics/images/backg_graphics.png" alt="Launch Illustration" data-lightbox="backg_graphics"><img src="/screening/public/assets/grocery_crud/themes/internetics/images/backg_graphics_th.png" style="float: right; margin:10px" width=300></a>   
+                                  </div>
+                                  <BR>
+                            <input type="image" onclick="print_me();" class="print_pdf_button" id="print_pdf_button" style="display: inline-block;" src="/screening/public/assets/grocery_crud/themes/internetics/images/print-pdf-icon2.png" title="Print" />
 							
                     	</div>
                     </div>

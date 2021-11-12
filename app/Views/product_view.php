@@ -566,6 +566,13 @@ function remove_brackets() {
 						
 						else if (checkbox_array[0] == true && checkbox_array[1] == true && checkbox_array[2] == true && checkbox_array[3] == true && checkbox_array[4] == true && checkbox_array[5] == true ) 
 						{ display_mobility_level.style.display = "none"; mobility_level_calc.innerHTML = 'Level 2'; }
+            
+            else if (checkbox_array[0] == true && checkbox_array[1] == true && checkbox_array[2] == true && checkbox_array[3] == true && checkbox_array[4] == true) 
+            { display_mobility_level.style.display = "none"; mobility_level_calc.innerHTML = 'Level 2'; }
+            
+            else if (checkbox_array[0] == true && checkbox_array[1] == true && checkbox_array[2] == true && checkbox_array[3] == true) 
+            { display_mobility_level.style.display = "none"; mobility_level_calc.innerHTML = 'Level 2'; }
+            
 						
 						else if (checkbox_array[0] == true && checkbox_array[1] == true && checkbox_array[2] == true ) 
 						{ display_mobility_level.style.display = "none"; mobility_level_calc.innerHTML = 'Level 3'; }
