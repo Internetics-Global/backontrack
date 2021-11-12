@@ -24,6 +24,15 @@ body {
 	display:none;
 }
 
+
+#print_pdf_message {
+  background: #ffffff;
+  padding: 20px;
+  margin:20px;
+}
+
+
+
 .gc-container {
 max-width: 1200px;
 margin-left: auto;
@@ -448,7 +457,7 @@ input:checked + .slider:before {
 	
 	.print_pdf_button {
 
-	margin-top: -60px;
+	margin-top: 0px;
 	
 	}
 

@@ -39,7 +39,7 @@ class Product extends BaseController
         $crud->setSubject('List of screenings');             
 //      $crud->fields(['title']);       
 
-		$crud->fields(['mobility_level', 'reason_for_the_screening', 'reason_for_the_screening_other', 'conduct_physical_screen', 'available_equipment_1', 'available_equipment_1_other', 'available_equipment_2', 'available_equipment_2_other', 'available_equipment_3', 'available_equipment_3_other', 'available_equipment_4', 'handling_procedure_1', 'handling_procedure_2', 'handling_procedure_3', 'handling_procedure_4', 'environmental_risk_factors', 'environmental_risk_factors_other', 'steps_to_manage_the_risk', 'steps_to_manage_the_risk_other', 'notes']);
+		$crud->fields(['mobility_level', 'reason_for_the_screening', 'reason_for_the_screening_other', 'conduct_physical_screen', 'available_equipment_1', 'available_equipment_1_other', 'available_equipment_2', 'available_equipment_2_other', 'available_equipment_3', 'available_equipment_3_other', 'available_equipment_4', 'handling_procedure_1', 'handling_procedure_2', 'handling_procedure_3', 'handling_procedure_4', 'environmental_risk_factors', 'environmental_risk_factors_other', 'steps_to_manage_the_risk', 'steps_to_manage_the_risk_other', 'name', 'date_of_birth', 'notes']);
 		
 		$crud->displayAs('reason_for_the_screening','The reason this mobility screening is being completed');
 		$crud->displayAs('reason_for_the_screening_other','Other reasons for the screening');
@@ -60,12 +60,14 @@ class Product extends BaseController
 		$crud->displayAs('steps_to_manage_the_risk','Considering any variance in mobility status and any environmental hazards identified, tick the steps you will take to manage the risk/s'); 
 		$crud->displayAs('steps_to_manage_the_risk_other','Other steps you have taken'); 
 		$crud->displayAs('mobility_level','Mobility Level');
+		$crud->displayAs('name','Name');
+		$crud->displayAs('date_of_birth','Date Of Birth');
 		$crud->displayAs('notes','Additional notes');
 
 	
 		
 		
-
+		$crud->fieldType('date_of_birth', 'date');
 
 		$crud->fieldType('reason_for_the_screening_other', 'invisible');
 		$crud->fieldType('available_equipment_1_other', 'invisible');

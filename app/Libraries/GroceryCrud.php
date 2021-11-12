@@ -3338,7 +3338,7 @@ class GroceryCrud extends grocery_CRUD_States
     const	VERSION = "2.0.0";
 
     const	JQUERY 			= "jquery-1.11.1.min.js";
-    const	JQUERY_UI_JS 	= "jquery-ui-1.10.3.custom.min.js";
+    const	JQUERY_UI_JS 	= "jquery-ui-1.10.3.custom.min.js?v=1";
     const	JQUERY_UI_CSS 	= "jquery-ui-1.10.1.custom.min.css";
 
     const THEME_FLEXIGRID    = 'flexigrid';

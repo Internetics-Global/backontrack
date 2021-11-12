@@ -5,7 +5,7 @@
     $this->set_css($this->default_theme_path.'/internetics/css/general.css');
     $this->set_css($this->default_theme_path.'/internetics/css/add-edit-form.css');
     $this->set_css($this->default_theme_path.'/internetics/css/main.css');
-    $this->set_css($this->default_theme_path.'/internetics/css/internetics.css?v=35');
+    $this->set_css($this->default_theme_path.'/internetics/css/internetics.css?v=41');
     $this->set_css($this->default_theme_path.'/internetics/css/lightbox.css');
     $this->set_css($this->default_theme_path.'/internetics/css/print.min.css');
    
@@ -62,7 +62,7 @@ $countfields = 0;
 	              
 	                <div id='summary_view'><div class='row py-2 align-items-center'>
 		              
-		               <div class='col-4 text-right'><div id="summary_mobility_level">Summary</div></div>
+		               <div class='col-4 text-right'><div id="summary_mobility_level">Mobility Level</div></div>
 		               <div class='col-4 text-center'><div id="final_mobility_level">X</div></div>
 		               <div class='col-4 text-left'><div id="conclusion_mobility_level">Summary</div></div>
 		               
@@ -212,7 +212,10 @@ $countfields = 0;
                         <div class="col-sm-offset-3 col-sm-12">
 	                        <button onclick="prev_question(); displayMobilityLevel();" class="btn btn-secondary btn-success b10" id="prev_question_btn" >RESTART</button>
 							<button onclick="next_question(); displayMobilityLevel();" class="btn btn-secondary btn-success b10" id="next_question_btn" >NEXT</button>
-							<BR>
+							<BR><div id="print_pdf_message" style="display: inline-block;">
+                                When selecting PRINT/PDF please ensure you tick  “Print backgrounds” (Safari) or “Background graphics” (Chrome) to see all the tick-boxes.
+                            </div>
+                            <BR>
 						    <input type="image" onclick="print_me();" class="print_pdf_button" id="print_pdf_button" style="display: inline-block;" src="/screening/public/assets/grocery_crud/themes/internetics/images/print-pdf-icon2.png" title="Print" />
 							
                     	</div>

@@ -64,7 +64,7 @@ function print_me() {
 		
 						printable: 'print_from_here', 
 						targetStyles: '*', 
-						css: ['/screening/public/assets/grocery_crud/themes/internetics/css/bootstrap/bootstrap.min.css', '/screening/public/assets/grocery_crud/themes/internetics/css/common.css', '/screening/public/assets/grocery_crud/themes/internetics/css/general.css', '/screening/public/assets/grocery_crud/themes/internetics/css/add-edit-form.css', '/screening/public/assets/grocery_crud/themes/internetics/css/main.css', '/screening/public/assets/grocery_crud/themes/internetics/css/internetics.css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css','/screening/public/assets/grocery_crud/themes/internetics/css/print25.css'],
+						css: ['/screening/public/assets/grocery_crud/themes/internetics/css/bootstrap/bootstrap.min.css', '/screening/public/assets/grocery_crud/themes/internetics/css/common.css', '/screening/public/assets/grocery_crud/themes/internetics/css/general.css', '/screening/public/assets/grocery_crud/themes/internetics/css/add-edit-form.css', '/screening/public/assets/grocery_crud/themes/internetics/css/main.css', '/screening/public/assets/grocery_crud/themes/internetics/css/internetics.css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css','/screening/public/assets/grocery_crud/themes/internetics/css/print27.css'],
 						style: '.gcrud-form-group { display: none; }',
 						header: 'Screening Form',
 						headerStyle: 'font-weight: 600;',
@@ -85,6 +85,7 @@ function print_me() {
     $(document).ready(function() {
         $('#prev_question_btn').css('display', 'none'); 
         $('#print_pdf_button').css('display', 'none');
+        $('#print_pdf_message').css('display', 'none');
         $('#q0').css('display', 'none');
         $('#q1').css('display', 'block');
         $('#summary_view').css('display', 'none');
@@ -207,6 +208,8 @@ function remove_brackets() {
 					bootbox.alert ('You have not ticked any boxes, your client should remain in bed.');
 
 					questionElements[12].style.display = 'block';
+          questionElements[13].style.display = 'block';
+          questionElements[14].style.display = 'block';
 					
 				}
 					
@@ -310,6 +313,8 @@ function remove_brackets() {
                     questionElements[11].style.display = 'block';
                     questionElements[12].style.display = 'block';
                     questionElements[13].style.display = 'block';
+                    questionElements[14].style.display = 'block';
+                    questionElements[15].style.display = 'block';
                     
                     if ((  (mobility_levels.innerHTML == 'You are at Level 1') )) {
                     questionElements[3].style.display = 'block';
@@ -338,7 +343,9 @@ function remove_brackets() {
                     questionElements[12].style.display = 'none';
 
                     $('#summary_view').css('display', 'block');
+                    $('#print_pdf_message').css('display', 'inline-block');
                     $('#print_pdf_button').css('display', 'inline-block');
+                    
 	                    
 	                    }                   
                    
@@ -352,6 +359,7 @@ function remove_brackets() {
 
                     $('#summary_view').css('display', 'block');
                     $('#print_pdf_button').css('display', 'inline-block');
+                    $('#print_pdf_message').css('display', 'inline-block');
 	                    
 	                    } 
                    
@@ -437,18 +445,21 @@ function remove_brackets() {
 					
 					$('#next_question_btn').css('display', 'none');
                     $('#print_pdf_button').css('display', 'inline-block');
-					
+					          $('#print_pdf_message').css('display', 'inline-block')
 				}
 
                 /* remove NEXT button at last record */
-                if (i == questionElements.length - 2) {
+                if (i == questionElements.length - 4) {
                     
                     $('#next_question_btn').css('display', 'none');
                     $('#print_pdf_button').css('display', 'inline-block');
+                    $('#print_pdf_message').css('display', 'inline-block');
                     
                     /* we are at the report, so switch the last block back on */
                     
                     questionElements[12].style.display = 'block';
+                    questionElements[13].style.display = 'block';
+                    questionElements[14].style.display = 'block';
                     
                     
                     
